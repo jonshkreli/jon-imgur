@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.card {
+  width: 300px;
+  height: 350px;
+  padding: 10px;
+  border: 1px solid #222222;
+  border-radius: 5px;
+  margin: 10px;
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  .thumbnail {
+    max-height:300px;
+    max-width: 300px;
+  }
+}
+
+.full-data-modal {
+  .modal-content {
+
+    .header {
+      display: flex;
+      .title-container {
+        width: 80%;
+      }
+      .details-container {
+        width: 20%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .voting {
+      align-content: center;
+      text-align: left;
+      .ups-label {
+        display: inline-block;
+        color: green;
+        font-size: 36px;
+        width: 30px;
+      }
+      .downs-label {
+        display: inline-block;
+        color: red;
+        font-size: 26px;
+        width: 30px;
+      }
+
+    }
+  }
+}
