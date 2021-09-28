@@ -1,3 +1,58 @@
+.header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  background: darkolivegreen;
+  color: white;
+
+  .big-title {
+    font-size: 30px;
+    font-family: "Adobe Fangsong Std R", "sans-serif";
+    margin: 0 10px;
+  }
+
+  .filtering-options {
+    margin: 0 10px;
+
+    .radio-group-label {
+      color: white;
+    }
+
+    .radio-group {
+      display: flex;
+      flex-flow: row;
+      margin: 0 10px;
+
+      .radio-label {
+        .radio-class {
+          color: white;
+          &.Mui-checked {
+            color: #ff74c2;
+          }
+        }
+      }
+    }
+
+.switch-form-control-class {
+  color: white;
+
+  .switch-class {
+    .Mui-checked {
+      color: #ff74c2;
+    }
+
+    .MuiSwitch-track {
+      background-color: #ffb8e0;;
+    }
+  }
+}
+
+  }
+
+
+}
+
+
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -15,6 +70,7 @@
   flex-flow: column;
   justify-content: space-around;
   align-items: flex-start;
+  background: #303030;
 
   .thumbnail {
     max-height:300px;
@@ -23,18 +79,31 @@
 }
 
 .full-data-modal {
-  .modal-content {
 
-    .header {
+  .app-bar-modal {
+    background: darkolivegreen;
+  }
+
+  .modal-content {
+    overflow: scroll;
+    background: #eeeeee;
+
+    .modal-header {
       display: flex;
+      background: #eeeeee;
+      color: #222222;
+
       .title-container {
-        width: 80%;
+        width: 70%;
       }
       .details-container {
-        width: 20%;
+        width: 30%;
         display: flex;
         justify-content: space-between;
       }
+    }
+
+    .description {
     }
 
     .voting {
@@ -53,6 +122,17 @@
         width: 30px;
       }
 
+    }
+
+    .score-container {
+      padding: 15px;
+      font-weight: bold;
+    }
+
+    .full-size-image-container img {
+      max-height:500px;
+      max-width: 500px;
+      //overflow: scroll;
     }
   }
 }

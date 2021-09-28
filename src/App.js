@@ -71,34 +71,39 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-          <div>
-              <FormControl component="fieldset">
-                  <FormLabel component="legend">Section</FormLabel>
-                  <RadioGroup aria-label="section" name="section" value={this.state.section} onChange={e => this.setFetchingParameter("section", e.target.value)}>
-                      {Object.values(SECTION).map(s => <FormControlLabel value={s} control={<Radio />} label={s.toLocaleUpperCase()} />)}
-                  </RadioGroup>
-              </FormControl>
+          <div className={"header"}>
+              <div className={"big-title"}>
+                  Imgur Gallery
+              </div>
+              <div className={"filtering-options"}>
+                  <FormControl component="fieldset">
+                      <FormLabel className={"radio-group-label"} component="legend">Section</FormLabel>
+                      <RadioGroup className={"radio-group"} aria-label="section" name="section" value={this.state.section} onChange={e => this.setFetchingParameter("section", e.target.value)}>
+                          {Object.values(SECTION).map(s => <FormControlLabel className={"radio-label"} key={s} value={s} control={<Radio className={"radio-class"} />} label={s.toLocaleUpperCase()} />)}
+                      </RadioGroup>
+                  </FormControl>
 
-              <FormControl component="fieldset">
-                  <FormLabel component="legend">Sort</FormLabel>
-                  <RadioGroup aria-label="sort" name="sort" value={this.state.sort} onChange={e => this.setFetchingParameter("sort", e.target.value)}>
-                      {Object.values(SORT).map(s => <FormControlLabel value={s} control={<Radio />} label={s.toLocaleUpperCase()} />)}
-                  </RadioGroup>
-              </FormControl>
+                  <FormControl component="fieldset">
+                      <FormLabel className={"radio-group-label"} component="legend">Sort</FormLabel>
+                      <RadioGroup className={"radio-group"} aria-label="sort" name="sort" value={this.state.sort} onChange={e => this.setFetchingParameter("sort", e.target.value)}>
+                          {Object.values(SORT).map(s => <FormControlLabel className={"radio-label"} key={s} value={s} control={<Radio className={"radio-class"} />} label={s.toLocaleUpperCase()} />)}
+                      </RadioGroup>
+                  </FormControl>
 
-              <FormControl component="fieldset">
-                  <FormLabel component="legend">Window</FormLabel>
-                  <RadioGroup aria-label="window" name="window" value={this.state.window} onChange={e => this.setFetchingParameter("window", e.target.value)}>
-                      {Object.values(WINDOW).map(s => <FormControlLabel value={s} control={<Radio />} label={s.toLocaleUpperCase()} />)}
-                  </RadioGroup>
-              </FormControl>
+                  <FormControl component="fieldset">
+                      <FormLabel className={"radio-group-label"} component="legend">Window</FormLabel>
+                      <RadioGroup className={"radio-group"} aria-label="window" name="window" value={this.state.window} onChange={e => this.setFetchingParameter("window", e.target.value)}>
+                          {Object.values(WINDOW).map(s => <FormControlLabel className={"radio-label"} key={s} value={s} control={<Radio className={"radio-class"} />} label={s.toLocaleUpperCase()} />)}
+                      </RadioGroup>
+                  </FormControl>
 
-              <FormControl component="fieldset">
-                  <FormControlLabel
-                      control={<Switch checked={this.state.showViral} onChange={e => this.setState({showViral: e.target.checked})} name="checkedA" />}
-                      label="Include viral"
-                  />
-              </FormControl>
+                  <FormControl component="fieldset">
+                      <FormControlLabel  className={"switch-form-control-class"}
+                          control={<Switch className={"switch-class"} checked={this.state.showViral} onChange={e => this.setState({showViral: e.target.checked})} name="checkedA" />}
+                          label="Include viral"
+                      />
+                  </FormControl>
+              </div>
 
           </div>
           <Home/>
